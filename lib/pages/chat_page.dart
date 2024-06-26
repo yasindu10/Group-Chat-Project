@@ -83,6 +83,7 @@ class _ChatPageState extends State<ChatPage> {
               return MessageTile(
                 message: messages[index].messageContent,
                 messageType: messages[index].messageType,
+                name: 'Yasindu Samarasinghe',
               );
             },
           ),
@@ -96,22 +97,6 @@ class _ChatPageState extends State<ChatPage> {
               color: Colors.black12,
               child: Row(
                 children: <Widget>[
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        color: Colors.blueAccent,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: const Icon(
-                        Icons.add_rounded,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     width: 15,
                   ),
@@ -126,14 +111,17 @@ class _ChatPageState extends State<ChatPage> {
                   const SizedBox(
                     width: 15,
                   ),
-                  FloatingActionButton(
-                    onPressed: () {},
-                    backgroundColor: Colors.blueAccent,
-                    elevation: 0,
-                    child: const Icon(
-                      Icons.send,
-                      color: Colors.white,
-                      size: 18,
+                  SizedBox(
+                    height: 35,
+                    child: FloatingActionButton(
+                      onPressed: () {},
+                      backgroundColor: Colors.blueAccent,
+                      elevation: 0,
+                      child: const Icon(
+                        Icons.send,
+                        color: Colors.white,
+                        size: 18,
+                      ),
                     ),
                   ),
                   const SizedBox(

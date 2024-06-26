@@ -59,7 +59,9 @@ class _GroupDetailPageState extends State<GroupDetailPage> {
               ),
             ),
             MemberSearchField(
-                title: 'Search Members', controller: TextEditingController()),
+              title: 'Search Members',
+              controller: TextEditingController(),
+            ),
             const Gap(10),
             ListView.builder(
               shrinkWrap: true,

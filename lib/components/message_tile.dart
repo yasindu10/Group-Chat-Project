@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MessageTile extends StatelessWidget {
-  const MessageTile(
-      {super.key, required this.messageType, required this.message});
+  const MessageTile({
+    super.key,
+    required this.messageType,
+    required this.message,
+    required this.name,
+  });
 
   final String messageType;
   final String message;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +28,23 @@ class MessageTile extends StatelessWidget {
                 : Colors.blueAccent),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-          child: Text(
-            message,
-            style: const TextStyle(fontSize: 15),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              messageType == "receiver"
+                  ? Text(
+                      name,
+                      style: const TextStyle(
+                        fontSize: 13,
+                      ),
+                    )
+                  : const SizedBox(),
+              Text(
+                message,
+                style: const TextStyle(fontSize: 14),
+              )
+            ],
           ),
         ),
       ),
