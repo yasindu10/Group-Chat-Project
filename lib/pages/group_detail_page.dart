@@ -119,7 +119,12 @@ class _SelectMembersPageState extends State<SelectMembersPage> {
         child: ListView(
           children: [
             const Gap(10),
-            Divider(),
+            const Divider(),
+            MemberSearchField(
+              controller: TextEditingController(),
+              title: 'Search users',
+            ),
+            const Gap(6),
             MemberTile(
               name: 'Yasindu Samarasinge',
               school: 'KCC',

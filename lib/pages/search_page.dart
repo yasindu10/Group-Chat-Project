@@ -22,7 +22,7 @@ class _SearchPageState extends State<SearchPage> {
           controller: TextEditingController(),
           icon: Icons.search,
         ),
-        const Gap(20),
+        const Gap(17),
         ListView.builder(
           physics: const BouncingScrollPhysics(),
           itemCount: 100,

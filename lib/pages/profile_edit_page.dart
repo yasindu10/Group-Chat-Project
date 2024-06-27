@@ -71,11 +71,12 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           const Gap(10),
           Padding(
             padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 15)),
-              onPressed: () {},
-              child: const Text('Upgrade'),
+            child: SizedBox(
+              height: 45,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Upgrade'),
+              ),
             ),
           )
         ],

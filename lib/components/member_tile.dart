@@ -37,7 +37,7 @@ class _MemberTileState extends State<MemberTile> {
       ),
       subtitle: Text(widget.school),
       trailing: isSelected
-          ? Padding(
+          ?  Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: const Icon(
                 Icons.check,

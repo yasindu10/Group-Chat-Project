@@ -34,7 +34,7 @@ class UserTile extends StatelessWidget {
       trailing: isLeader
           ? const Icon(
               Icons.verified,
-              size: 20,
+              size: 18,
             )
           : null,
     );

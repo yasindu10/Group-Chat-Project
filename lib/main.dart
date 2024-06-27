@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_incognito/constants/example.dart';
 import 'package:project_incognito/pages/home_page.dart';
 import 'package:project_incognito/pages/profile_page.dart';
-import 'package:project_incognito/pages/profile_update_page.dart';
+import 'package:project_incognito/pages/profile_edit_page.dart';
 import 'package:project_incognito/pages/search_page.dart';
 
 import 'components/bottom_bavbar.dart';
@@ -80,11 +80,17 @@ class _MyAppState extends State<MyApp> {
                     icon: const Icon(Icons.edit_rounded),
                   ),
                 )
-              : Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 17),
-                  child: const CircleAvatar(
-                    // backgroundColor: Colors.white10,
-                    backgroundImage: NetworkImage(myImage),
+              : GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _currentIndex = 2;
+                    });
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 17),
+                    child: const CircleAvatar(
+                      backgroundImage: NetworkImage(myImage),
+                    ),
                   ),
                 )
         ],
@@ -95,6 +101,7 @@ class _MyAppState extends State<MyApp> {
       ),
       bottomNavigationBar: CustomBottomNavbar(
         onChanged: changePage,
+        selectedIndex: _currentIndex,
       ),
     );
   }

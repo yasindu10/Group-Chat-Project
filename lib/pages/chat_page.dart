@@ -22,9 +22,9 @@ class _ChatPageState extends State<ChatPage> {
     ChatMessage(
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
         messageType: "sender"),
-    // ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
-    // ChatMessage(
-    //     messageContent: "Is there any thing wrong?", messageType: "sender"),
+    ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
+    ChatMessage(
+        messageContent: "Is there any thing wrong?", messageType: "sender"),
   ];
 
   @override
@@ -111,16 +111,28 @@ class _ChatPageState extends State<ChatPage> {
                   const SizedBox(
                     width: 15,
                   ),
-                  SizedBox(
-                    height: 35,
-                    child: FloatingActionButton(
+                  // SizedBox(
+                  //   child: FloatingActionButton(
+                  //     onPressed: () {},
+                  //     backgroundColor: Colors.blueAccent,
+                  //     elevation: 0,
+                  //     child: const Icon(
+                  //       Icons.send_rounded,
+                  //       color: Colors.white,
+                  //       size: 18,
+                  //     ),
+                  //   ),
+                  // ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white10,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: IconButton(
                       onPressed: () {},
-                      backgroundColor: Colors.blueAccent,
-                      elevation: 0,
-                      child: const Icon(
-                        Icons.send,
+                      icon: const Icon(
+                        Icons.send_rounded,
                         color: Colors.white,
-                        size: 18,
                       ),
                     ),
                   ),
