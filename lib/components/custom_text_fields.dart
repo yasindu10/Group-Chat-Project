@@ -5,22 +5,24 @@ class DefaultTextField extends StatelessWidget {
     super.key,
     required this.title,
     required this.controller,
+    required this.icon,
   });
 
   final String title;
   final TextEditingController controller;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+      padding: const EdgeInsets.only(top: 10, left: 16, right: 16),
       child: TextField(
         controller: controller,
         decoration: InputDecoration(
           hintText: title,
           hintStyle: TextStyle(color: Colors.grey.shade600),
           prefixIcon: Icon(
-            Icons.search,
+            icon,
             color: Colors.grey.shade600,
             size: 20,
           ),
@@ -59,6 +61,9 @@ class MemberSearchField extends StatelessWidget {
         height: 40,
         child: TextField(
           controller: controller,
+          style: TextStyle(
+            fontSize: 15,
+          ),
           decoration: InputDecoration(
             hintText: title,
             hintStyle: TextStyle(

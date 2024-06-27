@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_incognito/constants/example.dart';
 import 'package:project_incognito/pages/profile_page.dart';
 
 class UserTile extends StatelessWidget {
@@ -26,6 +27,7 @@ class UserTile extends StatelessWidget {
       ),
       leading: const CircleAvatar(
         backgroundColor: Colors.white10,
+        backgroundImage: NetworkImage(myImage),
       ),
       title: Text(name),
       subtitle: Text(school),

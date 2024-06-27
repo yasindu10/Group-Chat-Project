@@ -23,6 +23,9 @@ class _MemberTileState extends State<MemberTile> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: !widget.isDetailPage
+          ? const EdgeInsets.symmetric(horizontal: 5)
+          : null,
       leading: const CircleAvatar(
         backgroundColor: Colors.white10,
       ),
@@ -34,9 +37,12 @@ class _MemberTileState extends State<MemberTile> {
       ),
       subtitle: Text(widget.school),
       trailing: isSelected
-          ? const Icon(
-              Icons.check,
-              size: 19,
+          ? Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: const Icon(
+                Icons.check,
+                size: 19,
+              ),
             )
           : null,
       onTap: () {

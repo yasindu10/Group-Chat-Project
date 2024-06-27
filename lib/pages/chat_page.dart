@@ -22,9 +22,9 @@ class _ChatPageState extends State<ChatPage> {
     ChatMessage(
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
         messageType: "sender"),
-    ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
-    ChatMessage(
-        messageContent: "Is there any thing wrong?", messageType: "sender"),
+    // ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
+    // ChatMessage(
+    //     messageContent: "Is there any thing wrong?", messageType: "sender"),
   ];
 
   @override
@@ -39,7 +39,7 @@ class _ChatPageState extends State<ChatPage> {
             child: Row(
               children: <Widget>[
                 const SizedBox(
-                  width: 7,
+                  width: 6,
                 ),
                 IconButton(
                   onPressed: () {
@@ -78,7 +78,7 @@ class _ChatPageState extends State<ChatPage> {
             itemCount: messages.length,
             shrinkWrap: true,
             padding: const EdgeInsets.only(top: 10, bottom: 10),
-            physics: const NeverScrollableScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               return MessageTile(
                 message: messages[index].messageContent,

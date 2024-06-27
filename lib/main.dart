@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_incognito/constants/example.dart';
 import 'package:project_incognito/pages/home_page.dart';
 import 'package:project_incognito/pages/profile_page.dart';
 import 'package:project_incognito/pages/profile_update_page.dart';
@@ -82,7 +83,8 @@ class _MyAppState extends State<MyApp> {
               : Container(
                   margin: const EdgeInsets.symmetric(horizontal: 17),
                   child: const CircleAvatar(
-                    backgroundColor: Colors.white10,
+                    // backgroundColor: Colors.white10,
+                    backgroundImage: NetworkImage(myImage),
                   ),
                 )
         ],

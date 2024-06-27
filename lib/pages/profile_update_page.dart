@@ -42,7 +42,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                     width: size.width / 1.5,
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: const Text('Edit Profile'),
+                      child: const Text('Choose Profile'),
                     ),
                   )
                 ],
@@ -54,23 +54,26 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           DefaultTextField(
             title: 'Enter User name',
             controller: TextEditingController(),
+            icon: Icons.person_rounded,
           ),
           const Gap(10),
           DefaultTextField(
             title: 'Enter Description',
             controller: TextEditingController(),
+            icon: Icons.description_rounded,
           ),
           const Gap(10),
           DefaultTextField(
             title: 'Enter school name',
             controller: TextEditingController(),
+            icon: Icons.school_rounded,
           ),
           const Gap(10),
           Padding(
-            padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+            padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 20)),
+                  padding: const EdgeInsets.symmetric(vertical: 15)),
               onPressed: () {},
               child: const Text('Upgrade'),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_incognito/constants/example.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({
@@ -22,13 +23,19 @@ class _ProfilePageState extends State<ProfilePage> {
               title: const Text('Profile'),
             ),
       body: ListView(
-        children: const [
-          Divider(),
+        children: [
+          const Divider(),
           ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 0),
-            leading: CircleAvatar(
-              radius: 40,
-              backgroundColor: Colors.white10,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+            leading: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  myImage,
+                  width: 45,
+                ),
+              ),
             ),
             title: Text('Yasindu Samarasinge'),
             subtitle: Text('yasindusamarasinghe10@gmail.com'),

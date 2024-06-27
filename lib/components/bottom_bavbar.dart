@@ -10,7 +10,6 @@ class CustomBottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return GNav(
       onTabChange: onChanged,
-      hoverColor: Colors.white10,
       color: Colors.white,
       tabBackgroundColor: Colors.white10,
       tabBorderRadius: 15,

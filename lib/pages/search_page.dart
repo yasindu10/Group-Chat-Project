@@ -15,17 +15,23 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
+      physics: const BouncingScrollPhysics(),
       children: [
         DefaultTextField(
           title: 'Search users..',
           controller: TextEditingController(),
+          icon: Icons.search,
         ),
         const Gap(20),
         ListView.builder(
+          physics: const BouncingScrollPhysics(),
           itemCount: 100,
           shrinkWrap: true,
-          itemBuilder: (context, index) =>
-              const UserTile(name: 'Yasindu', school: 'KCC', isLeader: true),
+          itemBuilder: (context, index) => const UserTile(
+            name: 'Yasindu',
+            school: 'KCC',
+            isLeader: true,
+          ),
         )
       ],
     );

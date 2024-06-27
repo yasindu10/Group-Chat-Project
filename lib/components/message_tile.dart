@@ -36,7 +36,8 @@ class MessageTile extends StatelessWidget {
                   ? Text(
                       name,
                       style: const TextStyle(
-                        fontSize: 13,
+                        fontSize: 13.5,
+                        color: Color.fromARGB(255, 208, 209, 209),
                       ),
                     )
                   : const SizedBox(),

@@ -25,6 +25,7 @@ class _GroupDetailPageState extends State<GroupDetailPage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             const Divider(),
             const ListTile(
@@ -64,6 +65,7 @@ class _GroupDetailPageState extends State<GroupDetailPage> {
             ),
             const Gap(10),
             ListView.builder(
+              physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: 10,
               itemBuilder: (context, index) {
@@ -93,13 +95,14 @@ class _SelectMembersPageState extends State<SelectMembersPage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return AlertDialog(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10),
       title: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
+          Text(
             'Select Members',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 17,
             ),
           ),
           Text(
@@ -107,14 +110,16 @@ class _SelectMembersPageState extends State<SelectMembersPage> {
             style: TextStyle(
               fontSize: 17,
             ),
-          )
+          ),
         ],
       ),
       content: SizedBox(
         height: size.height / 1.4,
-        width: size.width / 1.4,
+        width: size.width / 1.1,
         child: ListView(
           children: [
+            const Gap(10),
+            Divider(),
             MemberTile(
               name: 'Yasindu Samarasinge',
               school: 'KCC',
@@ -141,7 +146,7 @@ class _SelectMembersPageState extends State<SelectMembersPage> {
       actionsAlignment: MainAxisAlignment.spaceBetween,
       actions: [
         SizedBox(
-          width: size.width / 3.5,
+          width: size.width / 3.2,
           child: ElevatedButton(
             onPressed: () => Navigator.pop(context),
             child: const Text(
@@ -153,7 +158,7 @@ class _SelectMembersPageState extends State<SelectMembersPage> {
           ),
         ),
         SizedBox(
-          width: size.width / 3.5,
+          width: size.width / 3.2,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent,
