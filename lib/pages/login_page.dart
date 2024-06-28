@@ -14,38 +14,71 @@ class _LogInPageState extends State<LogInPage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            'LogIn',
+            style: TextStyle(
+              fontSize: 28,
+            ),
+          ),
+          const Gap(10),
+          const Text(
+            'Login to chat more securely',
+            style: TextStyle(
+              fontSize: 15,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const Gap(30),
           DefaultTextField(
             title: 'User Name',
             controller: TextEditingController(),
             icon: Icons.person_rounded,
           ),
+          const Gap(5),
           DefaultTextField(
             title: 'Password',
             controller: TextEditingController(),
             icon: Icons.person_rounded,
           ),
           const Gap(15),
-          SizedBox(
-            width: size.width / 1.1,
-            height: 45,
-            child: ElevatedButton(
+          Container(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            width: size.width,
+            height: 48,
+            child: ElevatedButton.icon(
+              label: const Text(
+                'Log In',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
               ),
               onPressed: () {},
-              child: const Text(
-                'Log In',
-                style: TextStyle(color: Colors.white),
-              ),
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Don\'t have an account'),
+            const Gap(8),
+            Text(
+              'Sign Up',
+              style: TextStyle(
+                color: Colors.blue,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
