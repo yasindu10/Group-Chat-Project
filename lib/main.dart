@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_incognito/constants/example.dart';
 import 'package:project_incognito/pages/home_page.dart';
+import 'package:project_incognito/pages/login_page.dart';
 import 'package:project_incognito/pages/profile_page.dart';
 import 'package:project_incognito/pages/profile_edit_page.dart';
 import 'package:project_incognito/pages/search_page.dart';
@@ -17,7 +18,7 @@ void main() {
         textTheme:
             GoogleFonts.poppinsTextTheme().apply(bodyColor: Colors.white),
       ),
-      home: const MyApp(),
+      home: const LogInPage(),
     ),
   );
 }
