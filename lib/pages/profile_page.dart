@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_incognito/constants/example.dart';
+import 'package:project_incognito/pages/profile_edit_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({
@@ -39,6 +40,15 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             title: Text('Yasindu Samarasinge'),
             subtitle: Text('yasindusamarasinghe10@gmail.com'),
+            trailing: Container(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.logout_rounded,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                )),
           ),
           Divider(),
           ListTile(

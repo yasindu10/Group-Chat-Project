@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:project_incognito/components/custom_text_fields.dart';
+import 'package:project_incognito/pages/login_page.dart';
 
-class LogInPage extends StatefulWidget {
-  const LogInPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<LogInPage> createState() => _LogInPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LogInPageState extends State<LogInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -18,15 +19,15 @@ class _LogInPageState extends State<LogInPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'LogIn',
+          Text(
+            'SignUp',
             style: TextStyle(
               fontSize: 28,
             ),
           ),
           const Gap(10),
           const Text(
-            'Login to chat more securely',
+            'Create Account to chat more securely',
             style: TextStyle(
               fontSize: 15,
             ),
@@ -40,6 +41,12 @@ class _LogInPageState extends State<LogInPage> {
           ),
           const Gap(5),
           DefaultTextField(
+            title: 'Email',
+            controller: TextEditingController(),
+            icon: Icons.person_rounded,
+          ),
+          const Gap(5),
+          DefaultTextField(
             title: 'Password',
             controller: TextEditingController(),
             icon: Icons.person_rounded,
@@ -48,10 +55,10 @@ class _LogInPageState extends State<LogInPage> {
           Container(
             padding: const EdgeInsets.only(left: 16, right: 16),
             width: size.width,
-            height: 48,
+            height: 45,
             child: ElevatedButton.icon(
               label: const Text(
-                'Log In',
+                'Sign Up',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -70,13 +77,13 @@ class _LogInPageState extends State<LogInPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Don\'t have an account'),
+            const Text('Already have an account'),
             const Gap(8),
             GestureDetector(
               onTap: () => Navigator.of(context).pushNamedAndRemoveUntil(
-                  '/signup', (Route<dynamic> route) => false),
+                  '/login', (Route<dynamic> route) => false),
               child: const Text(
-                'Sign Up',
+                'Log In',
                 style: TextStyle(
                   color: Colors.blue,
                 ),

@@ -6,7 +6,7 @@ import 'package:project_incognito/pages/login_page.dart';
 import 'package:project_incognito/pages/profile_page.dart';
 import 'package:project_incognito/pages/profile_edit_page.dart';
 import 'package:project_incognito/pages/search_page.dart';
-
+import 'package:project_incognito/pages/signup_page.dart';
 import 'components/bottom_bavbar.dart';
 
 void main() {
@@ -18,7 +18,11 @@ void main() {
         textTheme:
             GoogleFonts.poppinsTextTheme().apply(bodyColor: Colors.white),
       ),
-      home: const LogInPage(),
+      routes: {
+        '/': (context) => const MyApp(),
+        '/login': (context) => const LogInPage(),
+        '/signup': (context) => const SignUpPage(),
+      },
     ),
   );
 }
@@ -70,15 +74,14 @@ class _MyAppState extends State<MyApp> {
         actions: [
           /// when profile page
           _currentIndex == 2
-              ? Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 17),
-                  child: IconButton(
-                    onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ProfileEditPage(),
-                        )),
-                    icon: const Icon(Icons.edit_rounded),
+              ? IconButton(
+                  onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProfileEditPage(),
+                      )),
+                  icon: const Icon(
+                    Icons.edit_rounded,
                   ),
                 )
               : GestureDetector(
