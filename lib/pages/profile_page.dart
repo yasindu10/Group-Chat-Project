@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-            title: Text('Yasindu Samarasinge'),
+            title: const Text('Yasindu Samarasinge'),
             subtitle: Text('yasindusamarasinghe10@gmail.com'),
             trailing: Container(
                 child: IconButton(
