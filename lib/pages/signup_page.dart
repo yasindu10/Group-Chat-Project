@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:project_incognito/components/custom_text_fields.dart';
-import 'package:project_incognito/pages/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -19,7 +18,7 @@ class _SignUpPageState extends State<SignUpPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'SignUp',
             style: TextStyle(
               fontSize: 28,
