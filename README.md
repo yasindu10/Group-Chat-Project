@@ -22,5 +22,5 @@ A Flutter-based group chat application that allows for secure communication acro
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/secure-group-chat-app.git
+   git clone https://github.com/yasindu10/Group-Chat-Project.git
    cd secure-group-chat-app
